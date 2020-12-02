@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ConquistadorAbsolutoBiblioteca</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Biblioteca\**" />
+    <EmbeddedResource Remove="Biblioteca\**" />
+    <None Remove="Biblioteca\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CSharpUtils">
+      <HintPath>..\..\..\GitHub\Repositorios\CSharpUtils\CSharpUtils\bin\Debug\netstandard2.0\CSharpUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

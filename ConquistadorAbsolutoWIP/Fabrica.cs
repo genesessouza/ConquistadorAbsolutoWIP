@@ -1,0 +1,30 @@
+﻿using ConquistadorAbsolutoWIP.Entidade;
+using ConquistadorAbsolutoWIP.Essencia;
+using ConquistadorAbsolutoWIP.Linhagem;
+using ConquistadorAbsolutoWIP.Raca;
+
+namespace ConquistadorAbsolutoWIP
+{
+    public static class Fabrica
+    {
+        public static IEssencia CriarEssencia()
+        {
+            return new BaseDeEssencia();
+        }
+
+        public static IRaca CriarRaca()
+        {
+            return new BaseDeRaca();
+        }
+
+        public static ILinhagem CriarLinhagem()
+        {
+            return new BaseDeLinhagem();
+        }
+
+        public static IEntidade CriarEntidade()
+        {
+            return new BaseDeEntidade();
+        }
+    }
+}
