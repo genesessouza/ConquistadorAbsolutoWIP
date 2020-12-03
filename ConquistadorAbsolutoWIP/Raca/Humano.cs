@@ -1,4 +1,4 @@
-﻿namespace ConquistadorAbsolutoWIP.Raca
+﻿namespace ConquistadorAbsolutoBiblioteca.Raca
 {
     public sealed class Humano
     {

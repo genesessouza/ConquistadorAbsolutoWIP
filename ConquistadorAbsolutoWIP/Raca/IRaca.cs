@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConquistadorAbsolutoWIP.Raca
+namespace ConquistadorAbsolutoBiblioteca.Raca
 {
     public interface IRaca : Origem.IOrigemRaca
     {

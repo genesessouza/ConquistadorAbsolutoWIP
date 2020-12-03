@@ -1,4 +1,4 @@
-﻿namespace ConquistadorAbsolutoWIP.Essencia
+﻿namespace ConquistadorAbsolutoBiblioteca.Essencia
 {
     /// <summary>
     /// Energias cujas aumentam o poder da essência. 

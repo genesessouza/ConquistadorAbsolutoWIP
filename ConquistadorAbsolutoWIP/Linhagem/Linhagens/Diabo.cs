@@ -1,7 +1,7 @@
-﻿using ConquistadorAbsolutoWIP.Essencia.Essencias;
-using ConquistadorAbsolutoWIP.Raca;
+﻿using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Linhagem.Linhagens
+namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
 {
     public sealed class Diabo
     {

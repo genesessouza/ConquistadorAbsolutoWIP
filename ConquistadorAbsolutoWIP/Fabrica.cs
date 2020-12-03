@@ -1,9 +1,9 @@
-﻿using ConquistadorAbsolutoWIP.Entidade;
-using ConquistadorAbsolutoWIP.Essencia;
-using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Raca;
+﻿using ConquistadorAbsolutoBiblioteca.Entidade;
+using ConquistadorAbsolutoBiblioteca.Essencia;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP
+namespace ConquistadorAbsolutoBiblioteca
 {
     public static class Fabrica
     {

@@ -1,10 +1,10 @@
-﻿using ConquistadorAbsolutoWIP.Essencia;
-using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Raca;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Essencia;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Entidade
+namespace ConquistadorAbsolutoBiblioteca.Entidade
 {
     public sealed class BaseDeEntidade : IEntidade
 

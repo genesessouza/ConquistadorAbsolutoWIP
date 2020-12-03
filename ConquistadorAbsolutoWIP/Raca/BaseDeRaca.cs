@@ -1,10 +1,10 @@
-﻿using ConquistadorAbsolutoWIP.Essencia;
-using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Origem;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Essencia;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Origem;
 
-namespace ConquistadorAbsolutoWIP.Raca
+namespace ConquistadorAbsolutoBiblioteca.Raca
 {
     public sealed class BaseDeRaca : IRaca
     {

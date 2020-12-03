@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConquistadorAbsolutoWIP.Origem
+namespace ConquistadorAbsolutoBiblioteca.Origem
 {
     /// <summary>
     /// Gênese de todas as linhagens, essências e raças.

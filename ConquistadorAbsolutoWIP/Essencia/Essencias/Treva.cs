@@ -1,15 +1,14 @@
-﻿using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Linhagem.Linhagens;
-using ConquistadorAbsolutoWIP.Origem;
-using ConquistadorAbsolutoWIP.Raca;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
+using ConquistadorAbsolutoBiblioteca.Origem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Essencia.Essencias
+namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 {
     public sealed class Treva
     {
         private static readonly Treva _treva = new Treva();
-        public static Treva ObterEssencia { get => _treva; }
         public static IEssencia EssenciaDaTreva { get; private set; }
 
         static Treva() { }
@@ -23,8 +22,8 @@ namespace ConquistadorAbsolutoWIP.Essencia.Essencias
             EssenciaDaTreva.Estado = Estado.Desperto;
             EssenciaDaTreva.Potencializador = EnergiaPropulsora.Negatividade;
             EssenciaDaTreva.AlinhamentoExigido = Entidade.Alinhamento.LealEgoista | Entidade.Alinhamento.LealNeutro;
-            EssenciaDaTreva.PoderExigido = 57000f;
-            EssenciaDaTreva.PoderConcedido = 33000f;
+            EssenciaDaTreva.PoderExigido = 77000f;
+            EssenciaDaTreva.PoderConcedido = 103000f;
             EssenciaDaTreva.RacaExigida = Infernal.RacaInfernal;
             EssenciaDaTreva.RacaIncompativel = Celestial.Celeste;
 

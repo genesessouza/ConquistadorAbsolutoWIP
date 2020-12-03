@@ -1,8 +1,8 @@
-﻿using ConquistadorAbsolutoWIP.Origem;
-using ConquistadorAbsolutoWIP.Raca;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Origem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Linhagem
+namespace ConquistadorAbsolutoBiblioteca.Linhagem
 {
     public interface ILinhagem : IOrigemRaca
     {

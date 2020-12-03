@@ -1,7 +1,7 @@
-﻿using ConquistadorAbsolutoWIP.Origem;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Origem;
 
-namespace ConquistadorAbsolutoWIP.Essencia
+namespace ConquistadorAbsolutoBiblioteca.Essencia
 {
     public interface IEssencia : IOrigem
     {
@@ -17,5 +17,7 @@ namespace ConquistadorAbsolutoWIP.Essencia
         /// Energia que aumenta o poder da essência. Ex.: Fogo: raiva; Água: calma.
         /// </summary>
         EnergiaPropulsora Potencializador { get; set; }
+
+        void ConferirRequisitos();
     }
 }

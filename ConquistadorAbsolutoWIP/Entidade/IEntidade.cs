@@ -1,7 +1,7 @@
-﻿using ConquistadorAbsolutoWIP.Raca;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Entidade
+namespace ConquistadorAbsolutoBiblioteca.Entidade
 {
     public interface IEntidade
     {

@@ -1,4 +1,4 @@
-﻿namespace ConquistadorAbsolutoWIP.Entidade
+﻿namespace ConquistadorAbsolutoBiblioteca.Entidade
 {
     public enum Alinhamento
     {

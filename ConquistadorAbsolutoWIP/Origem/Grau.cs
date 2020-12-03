@@ -1,4 +1,4 @@
-﻿namespace ConquistadorAbsolutoWIP.Origem
+﻿namespace ConquistadorAbsolutoBiblioteca.Origem
 {
     /// <summary>
     /// 
@@ -20,6 +20,10 @@
         /// <summary>
         /// 
         /// </summary>
-        Extraordinario
+        Extraordinario,
+        /// <summary>
+        /// 
+        /// </summary>
+        Unico
     }
 }

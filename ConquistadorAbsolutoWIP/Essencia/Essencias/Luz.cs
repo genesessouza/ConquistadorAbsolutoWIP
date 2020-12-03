@@ -1,15 +1,14 @@
-﻿using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Linhagem.Linhagens;
-using ConquistadorAbsolutoWIP.Origem;
-using ConquistadorAbsolutoWIP.Raca;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
+using ConquistadorAbsolutoBiblioteca.Origem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Essencia.Essencias
+namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 {
     public sealed class Luz
     {
         private static readonly Luz _luz = new Luz();
-        public static Luz ObterEssencia { get => _luz; }
         public static IEssencia EssenciaDaLuz { get; private set; }
 
         static Luz() { }

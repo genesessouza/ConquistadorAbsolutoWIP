@@ -1,14 +1,13 @@
-﻿using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Linhagem.Linhagens;
-using ConquistadorAbsolutoWIP.Origem;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
+using ConquistadorAbsolutoBiblioteca.Origem;
 
-namespace ConquistadorAbsolutoWIP.Essencia.Essencias
+namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 {
     public sealed class Vento
     {
         private static readonly Vento _vento = new Vento();
-        public static Vento ObterEssencia { get => _vento; }
         public static IEssencia EssenciaDoVento { get; private set; }
 
         static Vento() { }

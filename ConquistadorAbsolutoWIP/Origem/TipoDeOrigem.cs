@@ -1,4 +1,4 @@
-﻿namespace ConquistadorAbsolutoWIP.Origem
+﻿namespace ConquistadorAbsolutoBiblioteca.Origem
 {
     /// <summary>
     /// 

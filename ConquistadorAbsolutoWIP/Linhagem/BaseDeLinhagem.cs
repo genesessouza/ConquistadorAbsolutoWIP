@@ -1,11 +1,11 @@
-﻿using ConquistadorAbsolutoWIP.Entidade;
-using ConquistadorAbsolutoWIP.Essencia;
-using ConquistadorAbsolutoWIP.Origem;
-using ConquistadorAbsolutoWIP.Raca;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Entidade;
+using ConquistadorAbsolutoBiblioteca.Essencia;
+using ConquistadorAbsolutoBiblioteca.Origem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Linhagem
+namespace ConquistadorAbsolutoBiblioteca.Linhagem
 {
     public sealed class BaseDeLinhagem : ILinhagem
     {

@@ -1,11 +1,11 @@
-﻿using ConquistadorAbsolutoWIP.Entidade;
-using ConquistadorAbsolutoWIP.Linhagem;
-using ConquistadorAbsolutoWIP.Origem;
-using ConquistadorAbsolutoWIP.Raca;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Entidade;
+using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Origem;
+using ConquistadorAbsolutoBiblioteca.Raca;
 
-namespace ConquistadorAbsolutoWIP.Essencia
+namespace ConquistadorAbsolutoBiblioteca.Essencia
 {
     public class BaseDeEssencia : IEssencia
     {
@@ -42,6 +42,137 @@ namespace ConquistadorAbsolutoWIP.Essencia
             EssenciasIncompativeis = new List<IEssencia>();
             LinhagensExigidas = new List<ILinhagem>();
             LinhagensIncompativeis = new List<ILinhagem>();
+        }
+
+        ///<summary>
+        ///Confere os requisitos e, em caso de cumprimento, adiciona a essência.<br/>
+        ///Caso contrário, reverte o processo e///ou aplica penalidades de origem.
+        ///</summary>
+        public void ConferirRequisitos()
+        {
+            var a = false;
+            if (Portador.Alinhamento == AlinhamentoExigido | AlinhamentoExigido == Entidade.Alinhamento.Indefinido)
+            {
+                Console.Write($"Alinhamento compatível com <{Nome}> confere.\n");
+                a = true;
+            }
+            else
+            {
+                Console.Write($"Alinhamento incompatível com <{Nome}>.\n");
+                a = false;
+            }
+
+            var b = false;
+            if (PoderExigido < 1 | Portador.Poder >= PoderExigido)
+            {
+                Console.Write($"Poder de Origem exigido por <{Nome}> confere.\n");
+                b = true;
+            }
+            else
+            {
+                Console.Write($"Poder de Origem exigido por <{Nome}> não confere.\n");
+                b = false;
+            }
+
+            if (RacaExigida == null) throw new NullReferenceException("Raça exigida está nula!");
+            var c = false;
+            if (Portador.Casta == RacaExigida)
+            {
+                Console.Write($"Raça exigida por <{Nome}> confere.\n");
+                c = true;
+            }
+            else
+            {
+                Console.Write($"Raça exigida por <{Nome}> não foi encontrada.\n");
+                c = false;
+            }
+
+            if (RacaIncompativel == null) throw new NullReferenceException("Raça rejeitada está nula!");
+            var d = false;
+            if (Portador.Casta != RacaIncompativel)
+            {
+                Console.Write($"A raça rejeitada por <{Nome}> não foi encontrada.\n");
+                d = true;
+            }
+            else
+            {
+                Console.Write($"Raça incompatível com<{Nome}>.\n");
+                d = false;
+            }
+
+            if (EssenciasExigidas == null) throw new NullReferenceException("A lista de essências exigidas está nula!");
+            var e = false;
+            if (EssenciasExigidas.Count < 1) e = true;
+            foreach (IEssencia essenciaExigida in EssenciasExigidas)
+            {
+                if (Portador.EssenciasPossuidas.Contains(essenciaExigida))
+                {
+                    Console.Write($"Essencias exigidas por <{Nome}> encontradas.\n");
+                    e = true;
+                }
+                else
+                {
+                    Console.Write($"Essencias exigidas por <{Nome}> não encontradas.\n");
+                    e = false;
+                }
+            }
+
+            if (EssenciasIncompativeis == null) throw new NullReferenceException("A lista de essências rejeitadas está nula!");
+            var f = false;
+            if (EssenciasIncompativeis.Count < 1) f = true;
+            foreach (IEssencia essenciaRejeitada in EssenciasIncompativeis)
+            {
+                if (!Portador.EssenciasPossuidas.Contains(essenciaRejeitada))
+                {
+                    Console.Write($"Essencias incompatíveis com <{Nome}> não foram encontradas.\n");
+                    f = true;
+                }
+                else
+                {
+                    Console.Write($"Essencias incompatíveis com <{Nome}> foram encontradas.\n");
+                    f = false;
+                }
+            }
+
+            if (LinhagensExigidas == null) throw new NullReferenceException("A lista de linhagens exigidas está nula!");
+            var g = false;
+            if (LinhagensExigidas.Count < 1) g = true;
+            foreach (ILinhagem linhagem in LinhagensExigidas)
+            {
+                if (Portador.LinhagensHerdadas.Contains(linhagem))
+                {
+                    Console.Write($"Linhagens exigidas por <{Nome}> encontradas.\n");
+                    g = true;
+                }
+                else
+                {
+                    Console.Write($"Linhagens exigidas por <{Nome}> não encontradas.\n");
+                    g = false;
+                }
+            }
+
+            if (LinhagensIncompativeis == null) throw new NullReferenceException("A lista de linhagens rejeitadas está nula!");
+            var h = false;
+            if (LinhagensIncompativeis.Count < 1) h = true;
+            foreach (ILinhagem linhagemRejeitada in LinhagensIncompativeis)
+            {
+                if (!Portador.LinhagensHerdadas.Contains(linhagemRejeitada))
+                {
+                    Console.WriteLine($"Linhagens incompatíveis com <{Nome}> não encontradas.\n");
+                    h = true;
+                }
+                else
+                {
+                    Console.WriteLine($"Linhagens incompatíveis com <{Nome}> encontradas.\n");
+                    h = false;
+                }
+            }
+            Console.WriteLine($"A: {a}, B: {b}, C: {c}, D: {d}, E: {e}, F: {f}, G: {g}, H: {h}");
+            if (a & b & c & d & e & f & g & h)
+            {
+                Console.WriteLine($"Cumpriu todos os requisitos. Adicionou origem <{Nome}>.\n");
+                Portador.EssenciasPossuidas.Add(this);
+            }
         }
 
         public void MostrarAtributos()

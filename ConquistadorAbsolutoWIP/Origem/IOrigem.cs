@@ -1,7 +1,7 @@
-﻿using ConquistadorAbsolutoWIP.Essencia;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Essencia;
 
-namespace ConquistadorAbsolutoWIP.Origem
+namespace ConquistadorAbsolutoBiblioteca.Origem
 {
     /// <summary>
     /// Gênese de todas as linhagens, essências e raças.
