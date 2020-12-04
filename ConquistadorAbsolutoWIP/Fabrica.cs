@@ -1,4 +1,5 @@
 ﻿using ConquistadorAbsolutoBiblioteca.Entidade;
+using ConquistadorAbsolutoBiblioteca.Entidade.Origem;
 using ConquistadorAbsolutoBiblioteca.Essencia;
 using ConquistadorAbsolutoBiblioteca.Linhagem;
 using ConquistadorAbsolutoBiblioteca.Raca;
@@ -25,6 +26,11 @@ namespace ConquistadorAbsolutoBiblioteca
         public static IEntidade CriarEntidade()
         {
             return new BaseDeEntidade();
+        }
+
+        public static INucleoDeOrigem CriarNucleoDeOrigem()
+        {
+            return new NucleoDeOrigem();
         }
     }
 }

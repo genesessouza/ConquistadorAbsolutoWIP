@@ -1,5 +1,4 @@
 ﻿using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
-using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
 using ConquistadorAbsolutoBiblioteca.Raca;
 
 namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades
@@ -18,15 +17,8 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades
             EspiritoDoVento.Alinhamento = Alinhamento.CaoticoNeutro;
             EspiritoDoVento.Casta = Celestial.Celeste;
             EspiritoDoVento.Poder = 14500f + EspiritoDoVento.Casta.PoderConcedido;
+            EspiritoDoVento.NucleoDeOrigem.EnviarOrigem(EspiritoDoVento.Poder, EspiritoDoVento.NucleoDeOrigem.Receptores);
             EspiritoDoVento.EssenciasPossuidas.Add(Vento.EssenciaDoVento);
-            EspiritoDoVento.EssenciasPossuidas.Add(Agua.EssenciaDaAgua);
-            EspiritoDoVento.EssenciasPossuidas.Add(Terra.EssenciaDaTerra);
-            EspiritoDoVento.EssenciasPossuidas.Add(Fogo.EssenciaDoFogo);
-            EspiritoDoVento.EssenciasPossuidas.Add(Raio.EssenciaDoRaio);
-            EspiritoDoVento.EssenciasPossuidas.Add(Treva.EssenciaDaTreva);
-            EspiritoDoVento.EssenciasPossuidas.Add(Luz.EssenciaDaLuz);
-            EspiritoDoVento.LinhagensHerdadas.Add(Arcanjo.LinhagemDoArcanjo);
-            EspiritoDoVento.LinhagensHerdadas.Add(Diabo.LinhagemDoDiabo);
             AssinalarPortador();
         }
 
@@ -40,7 +32,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades
 
         static void Main(string[] args)
         {
-            Sylph.EspiritoDoVento.MostrarEntidade();
+            EspiritoDoVento.MostrarEntidade();
         }
     }
 }

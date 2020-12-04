@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Entidade.Origem;
 using ConquistadorAbsolutoBiblioteca.Raca;
 
 namespace ConquistadorAbsolutoBiblioteca.Entidade
@@ -6,8 +7,9 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade
     public interface IEntidade
     {
         string Nome { get; set; }
+        INucleoDeOrigem NucleoDeOrigem { get; set; }
         float Poder { get; set; }
-        Entidade.Alinhamento Alinhamento { get; set; }
+        Alinhamento Alinhamento { get; set; }
         IRaca Casta { get; set; }
         List<Essencia.IEssencia> EssenciasPossuidas { get; set; }
         List<Linhagem.ILinhagem> LinhagensHerdadas { get; set; }

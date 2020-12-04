@@ -27,6 +27,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem
         Grau Raridade { get; set; }
         float PoderConcedido { get; set; }
         float Poder { get; }
+        // List<Habilidade.IHabilidade> Habilidades { get; set; }
         Entidade.IEntidade Portador { get; set; }
         Entidade.Alinhamento AlinhamentoExigido { get; set; }
         float PoderExigido { get; set; }

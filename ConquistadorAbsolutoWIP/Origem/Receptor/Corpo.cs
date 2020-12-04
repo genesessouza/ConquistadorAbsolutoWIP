@@ -58,11 +58,10 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Distribui a origem recebida entre os atributos principais
         /// e cada atributo principal distribui para os sub-atributos.
         /// </summary>
-        public void InicializarReceptor()
+        public void InicializarReceptor(float poderDeOrigem)
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
             // Distribui a origem para três(número de atributos) e adiciona a lista principal
-            var umTercoDoPoderTotal = (float)System.Math.Round(PoderDeOrigem / 3f);
+            var umTercoDoPoderTotal = (float)System.Math.Round(poderDeOrigem / 3f);
             foreach (string atributoPrincipal in AtributosPrincipais)
                 AtributosDoCorpo.Add(new Atributo(atributoPrincipal, umTercoDoPoderTotal));
 
@@ -80,10 +79,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
             var PoderDeOrigemDaAgilidade = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaAgilidade.Length);
             foreach (string subAtributoDaAgilidade in SubAtributosDaAgilidade)
                 AtributosDaAgilidade.Add(new Atributo(subAtributoDaAgilidade, PoderDeOrigemDaAgilidade));
-
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            // System.Console.WriteLine($"Tempo de Execução [Inicializar Fonte]: {elapsedMs}");
         }
 
         /// <summary>
@@ -91,23 +86,13 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// </summary>
         public void MostrarAtributos()
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-
             System.Console.Write("Atributos Principais:");
-
-            Atributo atribPrinc = null;
             foreach (Atributo atributoPrincipal in AtributosDoCorpo)
             {
-                atribPrinc = new Atributo(atributoPrincipal.NomeDoAtributo, atributoPrincipal.ValorDoAtributo);
-                System.Console.Write($" {atribPrinc.NomeDoAtributo}: <{atribPrinc.ValorDoAtributo}>");
+                System.Console.Write($" {atributoPrincipal.NomeDoAtributo}: <{atributoPrincipal.ValorDoAtributo}>");
             }
 
             System.Console.Write("\n");
-
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            // System.Console.WriteLine($"Tempo de Execução [Mostrar Atributos]: {elapsedMs}");
-
         }
 
         /// <summary>
@@ -115,38 +100,27 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// </summary>
         public void MostrarSubAtributos()
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-
             System.Console.Write("Sub-Atributos da Força:");
 
-            Atributo subAtribForc = null;
             foreach (Atributo subAtributoDaForca in AtributosDaForca)
             {
-                subAtribForc = new Atributo(subAtributoDaForca.NomeDoAtributo, subAtributoDaForca.ValorDoAtributo);
-                System.Console.Write($" {subAtribForc.NomeDoAtributo}: <{subAtribForc.ValorDoAtributo}>");
+                System.Console.Write($" {subAtributoDaForca.NomeDoAtributo}: <{subAtributoDaForca.ValorDoAtributo}>");
             }
 
             System.Console.Write("\nSub-Atributos da Resistência:");
-            Atributo subAtribRes = null;
             foreach (Atributo subAtributoDaResistencia in AtributosDaResistencia)
             {
-                subAtribRes = new Atributo(subAtributoDaResistencia.NomeDoAtributo, subAtributoDaResistencia.ValorDoAtributo);
-                System.Console.Write($" {subAtribRes.NomeDoAtributo}: <{subAtribRes.ValorDoAtributo}>");
+                System.Console.Write($" {subAtributoDaResistencia.NomeDoAtributo}: <{subAtributoDaResistencia.ValorDoAtributo}>");
             }
 
             System.Console.Write("\nSub-Atributos da Agilidade:");
 
-            Atributo subAtribAgi = null;
             foreach (Atributo subAtributoDaAgilidade in AtributosDaAgilidade)
             {
-                subAtribAgi = new Atributo(subAtributoDaAgilidade.NomeDoAtributo, subAtributoDaAgilidade.ValorDoAtributo);
-                System.Console.Write($" {subAtribAgi.NomeDoAtributo}: <{subAtribAgi.ValorDoAtributo}>");
+                System.Console.Write($" {subAtributoDaAgilidade.NomeDoAtributo}: <{subAtributoDaAgilidade.ValorDoAtributo}>");
             }
 
             System.Console.WriteLine("\n");
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            // System.Console.WriteLine($"Tempo de Execução [Mostrar Sub-Atributos]: {elapsedMs}");
         }
     }
 }

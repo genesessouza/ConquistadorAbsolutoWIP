@@ -51,11 +51,11 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Distribui a origem recebida entre os atributos espirituais 
         /// principais e cada atributo principal distribui para os sub-atributos.
         /// </summary>
-        public void InicializarReceptor()
+        public void InicializarReceptor(float poderDeOrigem)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
             // Distribui a origem para dois(número de atributos) e adiciona a lista principal.
-            var metadeDoPoderTotal = (float)System.Math.Round(PoderDeOrigem / 2f);
+            var metadeDoPoderTotal = (float)System.Math.Round(poderDeOrigem / 2f);
             foreach (string atributoPrincipal in AtributosPrincipais)
                 AtributosDoEspirito.Add(new Atributo(atributoPrincipal, metadeDoPoderTotal));
 

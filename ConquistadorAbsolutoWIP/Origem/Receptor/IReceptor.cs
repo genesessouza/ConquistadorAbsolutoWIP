@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
+﻿namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 {
     /// <summary>
     /// Parte da entidade responsável por receber o poder da origem.
@@ -20,7 +16,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// <summary>
         /// Configura e preenche todos os valores.
         /// </summary>
-        void InicializarReceptor();
+        void InicializarReceptor(float poderDeOrigem);
         /// <summary>
         /// Retorna o valor dos atributos principais de cada fonte de origem.
         /// </summary>

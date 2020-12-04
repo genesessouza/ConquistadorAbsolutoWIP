@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ConquistadorAbsolutoBiblioteca
+﻿namespace ConquistadorAbsolutoBiblioteca
 {
     /// <summary>
     /// <br/> Usada para criar e manipular cada atributo da respectiva existência.
