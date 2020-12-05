@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ConquistadorAbsolutoBiblioteca.Essencia;
 using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
-using ConquistadorAbsolutoBiblioteca.Raca;
+using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
 {
@@ -22,8 +22,8 @@ namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
             LinhagemDoArcanjo.Raridade = Origem.Grau.Extraordinario;
             LinhagemDoArcanjo.PoderConcedido = 18000f;
             LinhagemDoArcanjo.Condicao = Origem.Estado.Desperto;
-            LinhagemDoArcanjo.RacaExigida = Celestial.Celeste;
-            LinhagemDoArcanjo.RacaIncompativel = Infernal.RacaInfernal;
+            LinhagemDoArcanjo.RacaExigida = Zohar.RacaZohar;
+            LinhagemDoArcanjo.RacaIncompativel = Nihitus.RacaNihitus;
             LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasHerdadas, new List<IEssencia> { Luz.EssenciaDaLuz });
             LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva });
             LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.LinhagensIncompativeis, new List<ILinhagem> { Diabo.LinhagemDoDiabo });

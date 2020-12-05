@@ -10,6 +10,9 @@ namespace ConquistadorAbsolutoBiblioteca.Raca
     {
         public string Titulo { get; set; }
         public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public string Historia { get; set; }
+        public IRaca RacaRival { get; set; }
         public TipoDeOrigem Tipo { get; private set; }
         public Grau Raridade { get; set; }
         public float PoderConcedido { get; set; }
@@ -35,7 +38,12 @@ namespace ConquistadorAbsolutoBiblioteca.Raca
         public void MostrarAtributos()
         {
             Console.Write($"\n-----------------------Raça-----------------------\n");
-            Console.Write($"<{Nome}> Titulo: <{Titulo}> Raridade: <{Raridade}> Poder Concedido: <{PoderConcedido}>\n");
+            if (RacaRival == null)
+                throw new NullReferenceException("Raça rival nula!!!");
+            else
+                Console.Write($"<{Nome}> Titulo: <{Titulo}> Raça Rival: <{RacaRival.Nome}> " +
+                    $"Raridade: <{Raridade}> Poder Concedido: <{PoderConcedido}>\n");
+
 
             if (Caracteristicas == null) throw new NullReferenceException("As características da raça estão nulas!");
 

@@ -1,5 +1,5 @@
 ﻿using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
-using ConquistadorAbsolutoBiblioteca.Raca;
+using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
 {
@@ -17,7 +17,7 @@ namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
             LinhagemDoDiabo = Fabrica.CriarLinhagem();
             LinhagemDoDiabo.Nome = "Linhagem do Diabo";
             LinhagemDoDiabo.PoderConcedido = 27000f;
-            LinhagemDoDiabo.RacaExigida = Infernal.RacaInfernal;
+            LinhagemDoDiabo.RacaExigida = Nihitus.RacaNihitus;
             LinhagemDoDiabo.EssenciasHerdadas.Add(Treva.EssenciaDaTreva);
             LinhagemDoDiabo.LinhagensIncompativeis.Add(Arcanjo.LinhagemDoArcanjo);
         }

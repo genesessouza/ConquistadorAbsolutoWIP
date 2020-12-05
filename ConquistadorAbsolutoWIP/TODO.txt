@@ -1,0 +1,6 @@
+﻿- Dps de zerar o jogo, ter o direito de escolher o próprio destino usando poder de origem;
+- Adicionar três raças para cada essência;
+- Terminar a implementação de habilidade;
+- Criar bg's dahora pra todas as essências, raças e (se permanecerem) linhagens;
+- Criar esses exemplos de entidades pra testar as raças, linhagens, essências, etc...:
+<<Drakeria Alynax> <Drake Snow> <Blaze Hellstorm> <Rhaegar Heinrich> <Alietta Nevora> <Sang'ha Kunali>> 

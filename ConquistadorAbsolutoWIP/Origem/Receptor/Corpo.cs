@@ -13,19 +13,19 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// <summary>
         /// Atributos principais do corpo.
         /// </summary>
-        private string[] AtributosPrincipais => new string[] { "Forca", "Resistencia", "Agilidade" };
+        private List<string> AtributosPrincipais = new List<string> { "Forca", "Resistencia", "Agilidade" };
         /// <summary>
         /// Sub-atributos da força.
         /// </summary>
-        private string[] SubAtributosDaForca => new string[] { "Ataque Fisico" };
+        private List<string> SubAtributosDaForca = new List<string> { "Ataque Fisico" };
         /// <summary>
         /// Sub-atributos da resistência.
         /// </summary>
-        private string[] SubAtributosDaResistencia => new string[] { "Defesa Fisica", "Saude Fisica" };
+        private List<string> SubAtributosDaResistencia = new List<string> { "Defesa Fisica", "Saude Fisica" };
         /// <summary>
         /// Sub-atributos da agilidade.
         /// </summary>
-        private string[] SubAtributosDaAgilidade => new string[] { "Reflexos", "Velocidade", "Destreza" };
+        private List<string> SubAtributosDaAgilidade = new List<string> { "Reflexos", "Velocidade", "Destreza" };
 
         // Lista dos atributos físicos principais e dos sub-atributos
         private List<Atributo> AtributosDoCorpo
@@ -66,17 +66,17 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
                 AtributosDoCorpo.Add(new Atributo(atributoPrincipal, umTercoDoPoderTotal));
 
             // Distribui uma parte do terço para cada sub-atributo da força e os adiciona a lista
-            var PoderDeOrigemDaForca = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaForca.Length);
+            var PoderDeOrigemDaForca = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaForca.Count);
             foreach (string subAtributoDaForca in SubAtributosDaForca)
                 AtributosDaForca.Add(new Atributo(subAtributoDaForca, PoderDeOrigemDaForca));
 
             // Distribui a outra parte do terço para cada sub-atributo da resistência e os adiciona a lista
-            var PoderDeOrigemDaResistencia = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaResistencia.Length);
+            var PoderDeOrigemDaResistencia = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaResistencia.Count);
             foreach (string subAtributoDaResistencia in SubAtributosDaResistencia)
                 AtributosDaResistencia.Add(new Atributo(subAtributoDaResistencia, PoderDeOrigemDaResistencia));
 
             // Distribui a última parte do terço para cada sub-atributo da agilidade e os adiciona a lista
-            var PoderDeOrigemDaAgilidade = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaAgilidade.Length);
+            var PoderDeOrigemDaAgilidade = (float)System.Math.Round(umTercoDoPoderTotal / SubAtributosDaAgilidade.Count);
             foreach (string subAtributoDaAgilidade in SubAtributosDaAgilidade)
                 AtributosDaAgilidade.Add(new Atributo(subAtributoDaAgilidade, PoderDeOrigemDaAgilidade));
         }
@@ -101,7 +101,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         public void MostrarSubAtributos()
         {
             System.Console.Write("Sub-Atributos da Força:");
-
             foreach (Atributo subAtributoDaForca in AtributosDaForca)
             {
                 System.Console.Write($" {subAtributoDaForca.NomeDoAtributo}: <{subAtributoDaForca.ValorDoAtributo}>");

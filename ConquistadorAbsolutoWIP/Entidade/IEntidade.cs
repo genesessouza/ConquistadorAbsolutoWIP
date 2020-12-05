@@ -7,7 +7,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade
     public interface IEntidade
     {
         string Nome { get; set; }
-        INucleoDeOrigem NucleoDeOrigem { get; set; }
+        INucleo NucleoDeOrigem { get; set; }
         float Poder { get; set; }
         Alinhamento Alinhamento { get; set; }
         IRaca Casta { get; set; }

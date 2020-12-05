@@ -3,7 +3,11 @@ using ConquistadorAbsolutoBiblioteca.Origem.Receptor;
 
 namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
 {
-    public interface INucleoDeOrigem
+    /// <summary>
+    /// Núcleo de Origem da Entidade.
+    /// <br/> Armazena
+    /// </summary>
+    public interface INucleo
     {
         List<IReceptor> Receptores { get; }
         Corpo OrigemCorporal { get; }

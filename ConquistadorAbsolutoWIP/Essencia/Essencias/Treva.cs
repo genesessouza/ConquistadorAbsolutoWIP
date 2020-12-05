@@ -2,7 +2,7 @@
 using ConquistadorAbsolutoBiblioteca.Linhagem;
 using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
 using ConquistadorAbsolutoBiblioteca.Origem;
-using ConquistadorAbsolutoBiblioteca.Raca;
+using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 {
@@ -24,8 +24,8 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
             EssenciaDaTreva.AlinhamentoExigido = Entidade.Alinhamento.LealEgoista | Entidade.Alinhamento.LealNeutro;
             EssenciaDaTreva.PoderExigido = 77000f;
             EssenciaDaTreva.PoderConcedido = 103000f;
-            EssenciaDaTreva.RacaExigida = Infernal.RacaInfernal;
-            EssenciaDaTreva.RacaIncompativel = Celestial.Celeste;
+            EssenciaDaTreva.RacaExigida = Nevora.RacaNevora;
+            EssenciaDaTreva.RacaIncompativel = Zohar.RacaZohar;
 
             EssenciaDaTreva.PopularLista
             (

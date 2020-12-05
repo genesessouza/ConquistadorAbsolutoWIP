@@ -2,7 +2,7 @@
 using ConquistadorAbsolutoBiblioteca.Linhagem;
 using ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens;
 using ConquistadorAbsolutoBiblioteca.Origem;
-using ConquistadorAbsolutoBiblioteca.Raca;
+using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 {
@@ -24,8 +24,8 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
             EssenciaDaLuz.AlinhamentoExigido = Entidade.Alinhamento.LealAltruista;
             EssenciaDaLuz.PoderExigido = 21000f;
             EssenciaDaLuz.PoderConcedido = 14000f;
-            EssenciaDaLuz.RacaExigida = Celestial.Celeste;
-            EssenciaDaLuz.RacaIncompativel = Infernal.RacaInfernal;
+            EssenciaDaLuz.RacaExigida = Zohar.RacaZohar;
+            EssenciaDaLuz.RacaIncompativel = Nihitus.RacaNihitus;
 
             EssenciaDaLuz.PopularLista
             (

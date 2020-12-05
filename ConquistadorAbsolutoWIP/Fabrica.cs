@@ -28,9 +28,9 @@ namespace ConquistadorAbsolutoBiblioteca
             return new BaseDeEntidade();
         }
 
-        public static INucleoDeOrigem CriarNucleoDeOrigem()
+        public static INucleo CriarNucleoDeOrigem()
         {
-            return new NucleoDeOrigem();
+            return new BaseDeNucleo();
         }
     }
 }

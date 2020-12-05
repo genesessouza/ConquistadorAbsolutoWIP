@@ -4,10 +4,10 @@ using ConquistadorAbsolutoBiblioteca.Origem.Receptor;
 namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
 {
     /// <summary>
-    ///Cuida das funções destinadas a origem,
-    ///recebendo-a através do núcleo e dividindo para os receptores.
+    /// Cuida das funções destinadas a origem,
+    /// recebendo-a através do núcleo e dividindo para os receptores.
     /// </summary>
-    public sealed class NucleoDeOrigem : INucleoDeOrigem
+    public sealed class BaseDeNucleo : INucleo
     {
         /// <summary>
         /// Receptores de Origem.
@@ -21,7 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         /// <summary>
         /// Inicializa os receptores e os adiciona à lista
         /// </summary>
-        public NucleoDeOrigem()
+        public BaseDeNucleo()
         {
             // Cria instância dos receptores
             OrigemCorporal = new Corpo();

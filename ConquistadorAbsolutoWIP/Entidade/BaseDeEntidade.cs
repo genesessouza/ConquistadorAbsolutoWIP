@@ -10,7 +10,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade
     public sealed class BaseDeEntidade : IEntidade
     {
         public string Nome { get; set; }
-        public INucleoDeOrigem NucleoDeOrigem { get; set; }
+        public INucleo NucleoDeOrigem { get; set; }
         public Alinhamento Alinhamento { get; set; }
         public float Poder { get; set; }
         public IRaca Casta { get; set; }
@@ -42,7 +42,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade
             Console.Write
             (
                 $"\n--------------------------------------Informações sobre a Entidade--------------------------------------\n" +
-                $"Nome: <{Nome}> Raça: <{Casta.Nome}> Titulos: <> Poder de Origem: <{Poder}> Alinhamento: <{Alinhamento}>\r\n"
+                $"Nome: <{Nome}> Titulos: <> Poder de Origem: <{Poder}> Alinhamento: <{Alinhamento}>\r\n"
             );
             Casta.MostrarAtributos();
             NucleoDeOrigem.MostrarTodosOsAtributos();
