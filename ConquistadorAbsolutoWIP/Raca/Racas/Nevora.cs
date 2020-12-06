@@ -17,7 +17,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
         private Nevora()
         {
             RacaNevora = Fabrica.CriarRaca();
-            RacaNevora.Titulo = "Raça dos Diabos";
+            RacaNevora.Titulo = "Filhos das Trevas";
             RacaNevora.Nome = "Nevora";
             RacaNevora.Descricao = "";
             RacaNevora.Historia = "";

@@ -44,10 +44,10 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia
             LinhagensIncompativeis = new List<ILinhagem>();
         }
 
-        ///<summary>
-        ///Confere os requisitos e, em caso de cumprimento, adiciona a essência.<br/>
-        ///Caso contrário, reverte o processo e///ou aplica penalidades de origem.
-        ///</summary>
+        /// <summary>
+        /// Confere os requisitos e, em caso de cumprimento, adiciona a essência.<br/>
+        /// Caso contrário, reverte o processo e///ou aplica penalidades de origem.
+        /// </summary>
         public void ConferirRequisitos()
         {
             var a = false;

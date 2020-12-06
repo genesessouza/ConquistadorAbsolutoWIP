@@ -1,4 +1,5 @@
-﻿using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
+﻿using System.Diagnostics;
+using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
 using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades

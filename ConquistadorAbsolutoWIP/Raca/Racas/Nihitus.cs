@@ -6,7 +6,7 @@ using ConquistadorAbsolutoBiblioteca.Origem;
 namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
 {
     /// <summary>
-    /// Raça dos Demônios inferiores.
+    /// Raça dos Demônios.
     /// </summary>
     public sealed class Nihitus
     {
@@ -18,7 +18,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
         private Nihitus()
         {
             RacaNihitus = Fabrica.CriarRaca();
-            RacaNihitus.Titulo = "Raça dos Demônios";
+            RacaNihitus.Titulo = "Arautos do Inferno";
             RacaNihitus.Nome = "Nihitus";
             RacaNihitus.Descricao = "";
             RacaNihitus.Historia = "";

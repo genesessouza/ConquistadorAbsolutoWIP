@@ -17,12 +17,11 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
         private Zohar()
         {
             RacaZohar = Fabrica.CriarRaca();
-            RacaZohar.Titulo = "Celestiais";
+            RacaZohar.Titulo = "Filhos da Luz";
             RacaZohar.Nome = "Zohar";
             RacaZohar.Raridade = Grau.Extraordinario;
             RacaZohar.PoderConcedido = 5400f;
-            RacaZohar.Caracteristicas.Add("Alado");
-            RacaZohar.Caracteristicas.Add("Pele de bronze");
+            RacaZohar.PopularLista(RacaZohar.Caracteristicas, new List<string> { "Alado", "Pele de bronze" };
             RacaZohar.RacaRival = Nihitus.RacaNihitus;
 
             RacaZohar.PopularLista(RacaZohar.EssenciasDeRaca, new List<IEssencia> { Luz.EssenciaDaLuz, Terra.EssenciaDaTerra });
