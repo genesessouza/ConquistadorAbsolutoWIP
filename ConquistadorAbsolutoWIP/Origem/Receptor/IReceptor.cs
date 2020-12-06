@@ -1,4 +1,6 @@
-﻿namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
+﻿using System.Collections.Generic;
+
+namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 {
     /// <summary>
     /// Parte da entidade responsável por receber o poder da origem.
@@ -13,6 +15,11 @@
         /// Poder de origem atual.
         /// </summary>
         float PoderDeOrigem { get; }
+        List<string> NomesDeAtributo { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        List<Atributo.IAtributo> Atributos { get; set; }
         /// <summary>
         /// Configura e preenche todos os valores.
         /// </summary>

@@ -27,33 +27,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// </summary>
         private List<string> SubAtributosDaAgilidade = new List<string> { "Reflexos", "Velocidade", "Destreza" };
 
-        // Lista dos atributos físicos principais e dos sub-atributos
-        private List<Atributo> AtributosDoCorpo
-            = new List<Atributo>();
-        private List<Atributo> AtributosDaForca
-            = new List<Atributo>();
-        private List<Atributo> AtributosDaResistencia
-            = new List<Atributo>();
-        private List<Atributo> AtributosDaAgilidade
-            = new List<Atributo>();
-
-        // Poder de Origem enviada para o corpo através do núcleo.
-        // Construtor vazio para caso de não haver origem.
-        public Corpo()
-        {
-            Nome = "Corpo";
-        }
-
-        /// <summary>
-        /// Construtor para enviar a origem ao corpo.
-        /// </summary>
-        /// <param name="poderDeOrigemCorporal">Origem física recebida pelo núcleo.</param>
-        public Corpo(float poderDeOrigemCorporal)
-        {
-            Nome = "Corpo";
-            PoderDeOrigem = poderDeOrigemCorporal;
-        }
-
         /// <summary>
         /// Distribui a origem recebida entre os atributos principais
         /// e cada atributo principal distribui para os sub-atributos.

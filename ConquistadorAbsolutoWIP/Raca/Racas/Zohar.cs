@@ -21,7 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
             RacaZohar.Nome = "Zohar";
             RacaZohar.Raridade = Grau.Extraordinario;
             RacaZohar.PoderConcedido = 5400f;
-            RacaZohar.PopularLista(RacaZohar.Caracteristicas, new List<string> { "Alado", "Pele de bronze" };
+            RacaZohar.PopularLista(RacaZohar.Caracteristicas, new List<string> { "Alado", "Pele de bronze" });
             RacaZohar.RacaRival = Nihitus.RacaNihitus;
 
             RacaZohar.PopularLista(RacaZohar.EssenciasDeRaca, new List<IEssencia> { Luz.EssenciaDaLuz, Terra.EssenciaDaTerra });

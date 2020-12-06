@@ -23,11 +23,6 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         /// </summary>
         public BaseDeNucleo()
         {
-            // Cria instância dos receptores
-            OrigemCorporal = new Corpo();
-            OrigemMental = new Mente();
-            OrigemEspiritual = new Espirito();
-
             // Adiciona os receptores
             Receptores = new List<IReceptor>
             {
@@ -35,6 +30,10 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
                 OrigemMental,
                 OrigemEspiritual
             };
+            for (int numeroDoReceptor = 0; numeroDoReceptor < Receptores.Count; numeroDoReceptor++)
+            {
+                Receptores[numeroDoReceptor] = Fabrica.CriarReceptor();
+            }
         }
 
         /// <summary>

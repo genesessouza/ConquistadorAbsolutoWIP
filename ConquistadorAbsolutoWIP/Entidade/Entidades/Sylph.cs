@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
+﻿using ConquistadorAbsolutoBiblioteca.Essencia.Essencias;
 using ConquistadorAbsolutoBiblioteca.Raca.Racas;
 
 namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades
@@ -16,7 +15,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Entidades
             EspiritoDoVento = Fabrica.CriarEntidade();
             EspiritoDoVento.Nome = "Sylph";
             EspiritoDoVento.Alinhamento = Alinhamento.CaoticoNeutro;
-            EspiritoDoVento.Casta = Felenis.RacaFelenis;
+            EspiritoDoVento.Casta = Nihitus.RacaNihitus;
             EspiritoDoVento.Poder = 14500f + EspiritoDoVento.Casta.PoderConcedido;
             EspiritoDoVento.NucleoDeOrigem.EnviarOrigem(EspiritoDoVento.Poder, EspiritoDoVento.NucleoDeOrigem.Receptores);
             EspiritoDoVento.EssenciasPossuidas.Add(Vento.EssenciaDoVento);

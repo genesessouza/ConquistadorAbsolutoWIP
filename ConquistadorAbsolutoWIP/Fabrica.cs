@@ -2,6 +2,7 @@
 using ConquistadorAbsolutoBiblioteca.Entidade.Origem;
 using ConquistadorAbsolutoBiblioteca.Essencia;
 using ConquistadorAbsolutoBiblioteca.Linhagem;
+using ConquistadorAbsolutoBiblioteca.Origem.Receptor;
 using ConquistadorAbsolutoBiblioteca.Raca;
 
 namespace ConquistadorAbsolutoBiblioteca
@@ -31,6 +32,11 @@ namespace ConquistadorAbsolutoBiblioteca
         public static INucleo CriarNucleoDeOrigem()
         {
             return new BaseDeNucleo();
+        }
+
+        public static IReceptor CriarReceptor()
+        {
+            return new BaseDeReceptor();
         }
     }
 }
