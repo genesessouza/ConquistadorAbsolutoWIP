@@ -24,9 +24,9 @@ namespace ConquistadorAbsolutoBiblioteca.Linhagem.Linhagens
             LinhagemDoArcanjo.Condicao = Origem.Estado.Desperto;
             LinhagemDoArcanjo.RacaExigida = Zohar.RacaZohar;
             LinhagemDoArcanjo.RacaIncompativel = Nihitus.RacaNihitus;
-            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasHerdadas, new List<IEssencia> { Luz.EssenciaDaLuz });
-            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva });
-            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.LinhagensIncompativeis, new List<ILinhagem> { Diabo.LinhagemDoDiabo });
+            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasHerdadas, new IEssencia[] { Luz.EssenciaDaLuz });
+            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.EssenciasIncompativeis, new IEssencia[] { Treva.EssenciaDaTreva });
+            LinhagemDoArcanjo.PopularLista(LinhagemDoArcanjo.LinhagensIncompativeis, new ILinhagem[] { Diabo.LinhagemDoDiabo });
         }
     }
 }

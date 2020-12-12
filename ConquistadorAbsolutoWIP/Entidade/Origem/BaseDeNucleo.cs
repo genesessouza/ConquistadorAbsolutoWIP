@@ -26,7 +26,6 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
             // Adiciona os receptores
             Receptores = new List<IReceptor>
             {
-                OrigemCorporal,
                 OrigemMental,
                 OrigemEspiritual
             };

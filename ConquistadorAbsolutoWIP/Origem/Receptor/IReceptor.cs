@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ConquistadorAbsolutoBiblioteca.Origem.Receptor.Atributo;
 
 namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 {
@@ -10,16 +11,13 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// <summary>
         /// Nome do receptor.
         /// </summary>
-        string Nome { get; }
+        string Nome { get; set; }
         /// <summary>
         /// Poder de origem atual.
         /// </summary>
-        float PoderDeOrigem { get; }
-        List<string> NomesDeAtributo { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        List<Atributo.IAtributo> Atributos { get; set; }
+        float PoderDeOrigem { get; set; }
+        List<IAtributo> Atributos { get; set; }
+        Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
         /// <summary>
         /// Configura e preenche todos os valores.
         /// </summary>
@@ -32,5 +30,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Retorna os sub-atributos de cada atributo de todas as fontes de origem
         /// </summary>
         void MostrarSubAtributos();
+
+        void PopularLista<T>(List<T> lista, T[] valores);
     }
 }

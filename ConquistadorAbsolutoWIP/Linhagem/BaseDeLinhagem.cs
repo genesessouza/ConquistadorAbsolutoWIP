@@ -82,9 +82,9 @@ namespace ConquistadorAbsolutoBiblioteca.Linhagem
             Console.Write("\r\n");
         }
 
-        public void PopularLista<T>(List<T> lista, List<T> valores)
+        public void PopularLista<T>(List<T> lista, T[] valores)
         {
-            GenesesSouza.CSharpUtils.Collections.PopulateCollection(lista, valores);
+            GenesesSouza.CSharpUtils.CollectionsUtils.PopulateCollection(lista, valores);
         }
     }
 }

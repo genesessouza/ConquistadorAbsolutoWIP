@@ -6,28 +6,45 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 {
     public sealed class BaseDeReceptor : IReceptor
     {
-        public string Nome { get; }
-        public float PoderDeOrigem { get; }
-        public List<string> NomesDeAtributo { get; }
+        public string Nome { get; set; }
+        public float PoderDeOrigem { get; set; }
         public List<IAtributo> Atributos { get; set; }
+        public Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
 
         public void InicializarReceptor(float poderDeOrigem)
         {
-            var poderDividido = (float)Math.Round(poderDeOrigem / Atributos.Count);
-            foreach (var atrib in NomesDeAtributo)
+            var poderDistribuido = poderDeOrigem / SubAtributos.Values.Count;
+            var atributo = 0;
+            for (; atributo < Atributos.Count; atributo++)
             {
-                Atributos.Add(new BaseDeAtributo(atrib, poderDividido));
+                Atributos[atributo].ValorDoAtributo = poderDeOrigem;
             }
+            foreach (var subAtributo in SubAtributos)
+                subAtributo.Value[atributo].ValorDoAtributo += poderDistribuido;
         }
 
         public void MostrarAtributos()
         {
+            Console.Write("Atributos Principais:");
+            var atributoPrincipal = 0;
+            for (; atributoPrincipal < SubAtributos.Keys.Count; atributoPrincipal++)
+            {
 
+            }
+            for (int atributo = 0; atributo < SubAtributos.Keys.Count; atributo++)
+            {
+                // Console.WriteLine(SubAtributos.ContainsKey(SubAtomeDoAtributo);
+            }
         }
 
         public void MostrarSubAtributos()
         {
 
+        }
+
+        public void PopularLista<T>(List<T> lista, T[] valores)
+        {
+            GenesesSouza.CSharpUtils.CollectionsUtils.PopulateCollection(lista, valores);
         }
     }
 }
