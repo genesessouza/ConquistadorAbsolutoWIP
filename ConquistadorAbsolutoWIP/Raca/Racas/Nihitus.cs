@@ -29,11 +29,11 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
             RacaNihitus.PopularLista
             (
                 RacaNihitus.Caracteristicas,
-                new List<string> { "Alado", "Pele avermelhada", "Chifres na testa", "Aparência bestial", "Garras afiadas e longas" }
+                new string[] { "Alado", "Pele avermelhada", "Chifres na testa", "Aparência bestial", "Garras afiadas e longas" }
             );
 
-            RacaNihitus.PopularLista(RacaNihitus.EssenciasDeRaca, new List<IEssencia> { Fogo.EssenciaDoFogo });
-            RacaNihitus.PopularLista(RacaNihitus.EssenciasIncompativeis, new List<IEssencia> { Luz.EssenciaDaLuz });
+            RacaNihitus.PopularLista(RacaNihitus.EssenciasDeRaca, new IEssencia[] { Fogo.EssenciaDoFogo });
+            RacaNihitus.PopularLista(RacaNihitus.EssenciasIncompativeis, new IEssencia[] { Luz.EssenciaDaLuz });
         }
     }
 }

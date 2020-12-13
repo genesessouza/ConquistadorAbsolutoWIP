@@ -23,15 +23,15 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 
             EssenciaDoFogo.PopularLista
             (
-                EssenciaDoFogo.Propriedades, new List<string> { "Ardente", "Brilhante", "Explosiva", "Impulsiva", "Amplificadora" }
+                EssenciaDoFogo.Propriedades, new string[]  { "Ardente", "Brilhante", "Explosiva", "Impulsiva", "Amplificadora" }
             );
 
-            EssenciaDoFogo.PopularLista(EssenciaDoFogo.EssenciasExigidas, new List<IEssencia> { Terra.EssenciaDaTerra });
+            EssenciaDoFogo.PopularLista(EssenciaDoFogo.EssenciasExigidas, new IEssencia[] { Terra.EssenciaDaTerra });
 
             EssenciaDoFogo.PopularLista
             (
                 EssenciaDoFogo.EssenciasIncompativeis,
-                new List<IEssencia> { Treva.EssenciaDaTreva, Agua.EssenciaDaAgua }
+                new IEssencia[] { Treva.EssenciaDaTreva, Agua.EssenciaDaAgua }
             );
         }
     }

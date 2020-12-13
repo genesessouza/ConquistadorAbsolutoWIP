@@ -21,13 +21,13 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
             RacaZohar.Nome = "Zohar";
             RacaZohar.Raridade = Grau.Extraordinario;
             RacaZohar.PoderConcedido = 5400f;
-            RacaZohar.PopularLista(RacaZohar.Caracteristicas, new List<string> { "Alado", "Pele de bronze" });
+            RacaZohar.PopularLista(RacaZohar.Caracteristicas, new string[] { "Alado", "Pele de bronze" });
             RacaZohar.RacaRival = Nihitus.RacaNihitus;
 
-            RacaZohar.PopularLista(RacaZohar.EssenciasDeRaca, new List<IEssencia> { Luz.EssenciaDaLuz, Terra.EssenciaDaTerra });
-            RacaZohar.PopularLista(RacaZohar.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva });
-            RacaZohar.PopularLista(RacaZohar.LinhagensDeRaca, new List<ILinhagem> { Arcanjo.LinhagemDoArcanjo });
-            RacaZohar.PopularLista(RacaZohar.LinhagensIncompativeis, new List<ILinhagem> { Diabo.LinhagemDoDiabo });
+            RacaZohar.PopularLista(RacaZohar.EssenciasDeRaca, new IEssencia[] { Luz.EssenciaDaLuz, Terra.EssenciaDaTerra });
+            RacaZohar.PopularLista(RacaZohar.EssenciasIncompativeis, new IEssencia[] { Treva.EssenciaDaTreva });
+            RacaZohar.PopularLista(RacaZohar.LinhagensDeRaca, new ILinhagem[] { Arcanjo.LinhagemDoArcanjo });
+            RacaZohar.PopularLista(RacaZohar.LinhagensIncompativeis, new ILinhagem[] { Diabo.LinhagemDoDiabo });
         }
     }
 }

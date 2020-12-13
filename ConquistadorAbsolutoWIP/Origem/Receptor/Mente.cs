@@ -9,7 +9,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
     /// <br/>além de mostrar seus valores.
     /// </para>
     /// </summary>
-    public sealed class Mente : IReceptor
+    public sealed class Mente
     {
         public string Nome { get; private set; }
         public float PoderDeOrigem { get; private set; }
@@ -28,9 +28,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Sub-atributos principais da sabedoria.
         /// </summary>
         private string[] SubAtributosDaSabedoria => new string[] { "Intuição" };
-
-        string IReceptor.Nome { get; set; }
-        float IReceptor.PoderDeOrigem { get; set; }
 
         public void InicializarReceptor(float poderDeOrigem)
         {

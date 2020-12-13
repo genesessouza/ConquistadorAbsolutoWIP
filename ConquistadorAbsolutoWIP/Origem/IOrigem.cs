@@ -39,6 +39,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem
         List<Linhagem.ILinhagem> LinhagensIncompativeis { get; set; }
 
         void MostrarAtributos();
-        void PopularLista<T>(List<T> lista, List<T> valores);
+        void PopularLista<T>(List<T> lista, T[] valores);
     }
 }

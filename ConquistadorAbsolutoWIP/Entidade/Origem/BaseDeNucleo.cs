@@ -14,9 +14,6 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         /// <br/>Recebem a origem distribuida pelo núcleo e fortalecem suas respectivas áreas.
         /// </summary>
         public List<IReceptor> Receptores { get; private set; }
-        public Corpo OrigemCorporal { get; private set; }
-        public Mente OrigemMental { get; private set; }
-        public Espirito OrigemEspiritual { get; private set; }
 
         /// <summary>
         /// Inicializa os receptores e os adiciona à lista
@@ -24,15 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         public BaseDeNucleo()
         {
             // Adiciona os receptores
-            Receptores = new List<IReceptor>
-            {
-                OrigemMental,
-                OrigemEspiritual
-            };
-            for (int numeroDoReceptor = 0; numeroDoReceptor < Receptores.Count; numeroDoReceptor++)
-            {
-                Receptores[numeroDoReceptor] = Fabrica.CriarReceptor();
-            }
+            Receptores = new List<IReceptor>();
         }
 
         /// <summary>
@@ -44,14 +33,12 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         /// <param name="receptores">Receptor do poder (corpo, mente, espírito).</param>
         public void EnviarOrigem(float poderDeOrigemRecebido, List<IReceptor> receptores)
         {
+            Receptores.Add(Corpo.Fisico);
             // Poder total distribuido para todos os receptores
             var poderDeOrigemDividido = poderDeOrigemRecebido / receptores.Count;
 
             // Seleciona o receptor escolhido pelo núcleo para receber a origem 
-            foreach (var receptor in receptores)
-            {
-                receptor.InicializarReceptor(poderDeOrigemDividido);
-            }
+
         }
 
         /// <summary>
@@ -71,7 +58,6 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
                     $"<{receptor.Nome}> Poder de Origem: <{receptor.PoderDeOrigem}>\n"
                 );
                 receptor.MostrarAtributos();
-                receptor.MostrarSubAtributos();
             }
         }
     }

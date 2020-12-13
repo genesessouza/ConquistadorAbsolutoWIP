@@ -19,9 +19,9 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
             RacaLeneha.Raridade = Origem.Grau.Extraordinario;
             RacaLeneha.RacaRival = Allumi.RacaAllumi;
 
-            RacaLeneha.PopularLista(RacaLeneha.Caracteristicas, new List<string> { "Corpo flamejante etéreo", "Explosivo", "Provocável" });
-            RacaLeneha.PopularLista(RacaLeneha.EssenciasDeRaca, new List<Essencia.IEssencia> { Fogo.EssenciaDoFogo });
-            RacaLeneha.PopularLista(RacaLeneha.EssenciasIncompativeis, new List<Essencia.IEssencia> { Agua.EssenciaDaAgua });
+            RacaLeneha.PopularLista(RacaLeneha.Caracteristicas, new string[] { "Corpo flamejante etéreo", "Explosivo", "Provocável" });
+            RacaLeneha.PopularLista(RacaLeneha.EssenciasDeRaca, new Essencia.IEssencia[] { Fogo.EssenciaDoFogo });
+            RacaLeneha.PopularLista(RacaLeneha.EssenciasIncompativeis, new Essencia.IEssencia[] { Agua.EssenciaDaAgua });
         }
     }
 }

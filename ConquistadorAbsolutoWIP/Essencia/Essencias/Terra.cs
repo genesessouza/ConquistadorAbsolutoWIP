@@ -21,9 +21,9 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
             EssenciaDaTerra.PoderConcedido = 37000f;
             EssenciaDaTerra.PoderExigido = 19800f;
 
-            EssenciaDaTerra.PopularLista(EssenciaDaTerra.EssenciasExigidas, new List<IEssencia> { Agua.EssenciaDaAgua });
-            EssenciaDaTerra.PopularLista(EssenciaDaTerra.Propriedades, new List<string> { "Endurecedora", "Fortalecedora", "Moldadora" });
-            EssenciaDaTerra.PopularLista(EssenciaDaTerra.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva });
+            EssenciaDaTerra.PopularLista(EssenciaDaTerra.EssenciasExigidas, new IEssencia[] { Agua.EssenciaDaAgua });
+            EssenciaDaTerra.PopularLista(EssenciaDaTerra.Propriedades, new string[] { "Endurecedora", "Fortalecedora", "Moldadora" });
+            EssenciaDaTerra.PopularLista(EssenciaDaTerra.EssenciasIncompativeis, new IEssencia[] { Treva.EssenciaDaTreva });
         }
     }
 }

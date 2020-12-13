@@ -19,14 +19,32 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
             Fisico = Fabrica.CriarReceptor();
             Fisico.Nome = "Receptáculo do Corpo";
 
-            Fisico.Atributos = new List<IAtributo> { new BaseDeAtributo("Força", 0f) };
-            Fisico.Atributos = new List<IAtributo> { new BaseDeAtributo("Resistência", 0f) };
-            Fisico.Atributos = new List<IAtributo> { new BaseDeAtributo("Agilidade", 0f) };
+            Fisico.Atributos.Add
+            (
+                new BaseDeAtributo("Força", 0f), new List<IAtributo> 
+                {
+                    new BaseDeAtributo("Ataque Físico", 0f),
+                }
+            );
 
-            Fisico.SubAtributos.Add(Fisico.Atributos[0], new List<IAtributo> { new BaseDeAtributo("Poder", 0f) });
-            Fisico.SubAtributos.Add(Fisico.Atributos[1], new List<IAtributo> { new BaseDeAtributo("Resistência", 0f) });
-            Fisico.SubAtributos.Add(Fisico.Atributos[1], new List<IAtributo> { new BaseDeAtributo("Vitalidade", 0f) });
-            Fisico.SubAtributos.Add(Fisico.Atributos[2], new List<IAtributo> { new BaseDeAtributo("Destreza", 0f) });
+            Fisico.Atributos.Add
+            (
+                new BaseDeAtributo("Resistência", 0f), new List<IAtributo> 
+                {
+                    new BaseDeAtributo("Defesa", 0f),
+                    new BaseDeAtributo("Vitalidade", 0f)
+                }
+            );
+
+            Fisico.Atributos.Add
+            (
+                new BaseDeAtributo("Agilidade", 0f), new List<IAtributo>
+                {
+                    new BaseDeAtributo("Reflexos", 0f),
+                    new BaseDeAtributo("Destreza", 0f),
+                    new BaseDeAtributo("Velocidade", 0f)
+                }
+            );
         }
     }
 }

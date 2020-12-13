@@ -8,32 +8,37 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
     {
         public string Nome { get; set; }
         public float PoderDeOrigem { get; set; }
-        public List<IAtributo> Atributos { get; set; }
-        public Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
+        public Dictionary<IAtributo, List<IAtributo>> Atributos { get; set; }
+
+        public BaseDeReceptor()
+        {
+            Atributos = new Dictionary<IAtributo, List<IAtributo>>();
+        }
 
         public void InicializarReceptor(float poderDeOrigem)
         {
-            var poderDistribuido = poderDeOrigem / SubAtributos.Values.Count;
+            var poderDistribuido = poderDeOrigem / Atributos.Values.Count;
+
             var atributo = 0;
-            for (; atributo < Atributos.Count; atributo++)
-            {
-                Atributos[atributo].ValorDoAtributo = poderDeOrigem;
-            }
-            foreach (var subAtributo in SubAtributos)
-                subAtributo.Value[atributo].ValorDoAtributo += poderDistribuido;
+            for (; atributo < Atributos.Values.Count; atributo++) ;
+
+            foreach (var atrib in Atributos.Keys)
+                atrib.ValorDoAtributo += poderDeOrigem;
+
+            foreach (var atrib in Atributos.Values) ;
+                // atrib[atributo].ValorDoAtributo += poderDistribuido;
         }
 
         public void MostrarAtributos()
         {
             Console.Write("Atributos Principais:");
-            var atributoPrincipal = 0;
-            for (; atributoPrincipal < SubAtributos.Keys.Count; atributoPrincipal++)
+            foreach (var atributoPrincipal in Atributos)
             {
-
+                Console.Write($"{atributoPrincipal.Key.NomeDoAtributo}: <{atributoPrincipal.Key.ValorDoAtributo}>");
             }
-            for (int atributo = 0; atributo < SubAtributos.Keys.Count; atributo++)
+            foreach (var atributoSecundario in Atributos.Values)
             {
-                // Console.WriteLine(SubAtributos.ContainsKey(SubAtomeDoAtributo);
+               // Console.Write($"{atributoSecundario[atributo].NomeDoAtributo}: <{atributoSecundario[atributo].ValorDoAtributo}>");
             }
         }
 

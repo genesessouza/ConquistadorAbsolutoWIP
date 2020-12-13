@@ -29,15 +29,15 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 
             EssenciaDaTreva.PopularLista
             (
-                EssenciaDaTreva.Propriedades, new List<string>
+                EssenciaDaTreva.Propriedades, new string[]
                 {
                     "Aterrorizante", "Corrosiva", "Corruptora", "Devoradora", "Venenosa",
                     "Intimidante", "Necromantica", "Necrotica", "Tentadora"
                 }
             );
 
-            EssenciaDaTreva.PopularLista(EssenciaDaTreva.EssenciasIncompativeis, new List<IEssencia> { Luz.EssenciaDaLuz });
-            EssenciaDaTreva.PopularLista(EssenciaDaTreva.LinhagensIncompativeis, new List<ILinhagem> { Arcanjo.LinhagemDoArcanjo });
+            EssenciaDaTreva.PopularLista(EssenciaDaTreva.EssenciasIncompativeis, new IEssencia[] { Luz.EssenciaDaLuz });
+            EssenciaDaTreva.PopularLista(EssenciaDaTreva.LinhagensIncompativeis, new ILinhagem[] { Arcanjo.LinhagemDoArcanjo });
         }
     }
 }

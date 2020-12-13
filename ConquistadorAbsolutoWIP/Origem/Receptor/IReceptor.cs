@@ -16,8 +16,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Poder de origem atual.
         /// </summary>
         float PoderDeOrigem { get; set; }
-        List<IAtributo> Atributos { get; set; }
-        Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
+        Dictionary<IAtributo, List<IAtributo>> Atributos { get; set; }
         /// <summary>
         /// Configura e preenche todos os valores.
         /// </summary>

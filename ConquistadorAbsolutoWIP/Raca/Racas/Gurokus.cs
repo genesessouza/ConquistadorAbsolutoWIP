@@ -20,7 +20,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
 
             RacaGurokus.PopularLista
             (
-                RacaGurokus.Caracteristicas, new List<string> { "Cascudo", "Seco", "Duro", "Lento e pesado", "Força Devastadora" }
+                RacaGurokus.Caracteristicas, new string[] { "Cascudo", "Seco", "Duro", "Lento e pesado", "Força Devastadora" }
             );
         }
     }

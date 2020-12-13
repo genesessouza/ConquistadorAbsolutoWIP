@@ -21,7 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
 
             RacaFelenis.PopularLista
             (
-                RacaFelenis.Caracteristicas, new List<string> { "Peludo", "Juba", "Força Monstruosa", "Instintos e reflexos anormais" }
+                RacaFelenis.Caracteristicas, new string[] { "Peludo", "Juba", "Força Monstruosa", "Instintos e reflexos anormais" }
             );
         }
     }

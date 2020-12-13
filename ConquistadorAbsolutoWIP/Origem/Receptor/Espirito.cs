@@ -7,7 +7,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
     /// <para> Cria atributos e sub-atributos espirituais e distribui o Poder de Origem recebido entre eles.
     /// <br/>Além de mostrar seus valores.</para>
     /// </summary>
-    public sealed class Espirito : IReceptor
+    public sealed class Espirito
     {
         public string Nome { get; private set; }
         public float PoderDeOrigem { get; private set; }
@@ -19,9 +19,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// Sub-atributos do carisma.
         /// </summary>
         private string[] SubAtributosDoCarisma => new string[] { "Atracao", "Sociabilidade", "Persuasao" };
-
-        string IReceptor.Nome { get; set; }
-        float IReceptor.PoderDeOrigem { get; set; }
         public List<IAtributo> Atributos { get; set; }
         public Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
 

@@ -230,10 +230,5 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia
         {
             GenesesSouza.CSharpUtils.CollectionsUtils.PopulateCollection(lista, valores);
         }
-
-        public void PopularLista<T>(List<T> lista, List<T> valores)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

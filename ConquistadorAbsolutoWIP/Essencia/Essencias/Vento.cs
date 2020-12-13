@@ -25,14 +25,14 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 
             EssenciaDoVento.PopularLista
             (
-                EssenciaDoVento.Propriedades, new List<string>
+                EssenciaDoVento.Propriedades, new string[]
                 {
                     "Impulsionante", "Cortante", "Gravitacional", "Explosiva", "Restringente", "Comprimente"
                 }
             );
 
-            EssenciaDoVento.PopularLista(EssenciaDoVento.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva });
-            EssenciaDoVento.PopularLista(EssenciaDoVento.LinhagensIncompativeis, new List<ILinhagem> { Diabo.LinhagemDoDiabo });
+            EssenciaDoVento.PopularLista(EssenciaDoVento.EssenciasIncompativeis, new IEssencia[] { Treva.EssenciaDaTreva });
+            EssenciaDoVento.PopularLista(EssenciaDoVento.LinhagensIncompativeis, new ILinhagem[] { Diabo.LinhagemDoDiabo });
         }
     }
 }
