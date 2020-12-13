@@ -7,7 +7,8 @@
 
         public BaseDeAtributo(string NomeDoAtributo, float ValorDoAtributo)
         {
-
+            this.NomeDoAtributo = NomeDoAtributo;
+            this.ValorDoAtributo = ValorDoAtributo;
         }
     }
 }

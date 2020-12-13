@@ -38,6 +38,10 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
 
             // Seleciona o receptor escolhido pelo núcleo para receber a origem 
 
+            for (int receptor = 0; receptor < Receptores.Count; receptor++)
+            {
+                Receptores[receptor].InicializarReceptor(poderDeOrigemDividido);
+            }
         }
 
         /// <summary>

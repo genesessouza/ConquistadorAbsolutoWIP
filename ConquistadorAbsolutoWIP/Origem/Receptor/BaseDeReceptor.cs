@@ -8,37 +8,37 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
     {
         public string Nome { get; set; }
         public float PoderDeOrigem { get; set; }
-        public Dictionary<IAtributo, List<IAtributo>> Atributos { get; set; }
+        public List<IAtributo> Atributos { get; set; }
+        public Dictionary<IAtributo, List<IAtributo>> SubAtributos { get; set; }
 
         public BaseDeReceptor()
         {
-            Atributos = new Dictionary<IAtributo, List<IAtributo>>();
+            Atributos = new List<IAtributo>();
+            SubAtributos = new Dictionary<IAtributo, List<IAtributo>>();
         }
 
         public void InicializarReceptor(float poderDeOrigem)
         {
-            var poderDistribuido = poderDeOrigem / Atributos.Values.Count;
+            var poderDistribuido = (float)Math.Round(poderDeOrigem / Atributos.Count);
 
-            var atributo = 0;
-            for (; atributo < Atributos.Values.Count; atributo++) ;
-
-            foreach (var atrib in Atributos.Keys)
-                atrib.ValorDoAtributo += poderDeOrigem;
-
-            foreach (var atrib in Atributos.Values) ;
-                // atrib[atributo].ValorDoAtributo += poderDistribuido;
+            var atrib = 0;
+            for (; atrib < Atributos.Count; atrib++)
+            {
+                Atributos[atrib].ValorDoAtributo += poderDistribuido;
+            }
+            foreach (var atributo in SubAtributos.Keys)
+            {
+                atributo.NomeDoAtributo = Atributos[atrib].NomeDoAtributo;
+                atributo.ValorDoAtributo = Atributos[atrib].ValorDoAtributo;
+            }
         }
 
         public void MostrarAtributos()
         {
-            Console.Write("Atributos Principais:\n");
-            foreach (var atributoPrincipal in Atributos.Keys)
+            Console.Write("Atributos Principais: ");
+            foreach (var atributoSecundario in Atributos)
             {
-                Console.Write($"{atributoPrincipal.NomeDoAtributo}: <{atributoPrincipal.ValorDoAtributo}>");
-            }
-            foreach (var atributoSecundario in Atributos.Values)
-            {
-               // Console.Write($"{atributoSecundario[atributo].NomeDoAtributo}: <{atributoSecundario[atributo].ValorDoAtributo}>");
+                Console.Write($" {atributoSecundario.NomeDoAtributo}: <{atributoSecundario.ValorDoAtributo}>");
             }
         }
 

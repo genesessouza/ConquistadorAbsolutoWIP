@@ -19,32 +19,36 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
             Fisico = Fabrica.CriarReceptor();
             Fisico.Nome = "Receptáculo do Corpo";
 
-            Fisico.Atributos.Add
+            Fisico.PopularLista
             (
-                new BaseDeAtributo("Força", 0f), new List<IAtributo> 
+                Fisico.Atributos, new List<IAtributo>()
                 {
-                    new BaseDeAtributo("Ataque Físico", 0f),
+                    new BaseDeAtributo("Força", 100f),
+                    new BaseDeAtributo("Resistência", 100f),
+                    new BaseDeAtributo("Agilidade", 90f)
                 }
             );
+            for (int atributo = 0; atributo < Fisico.Atributos.Count; atributo++)
+                Fisico.SubAtributos.Add(Fisico.Atributos[atributo], new List<IAtributo> { new BaseDeAtributo("Sub-Atributo", 0f) });
 
-            Fisico.Atributos.Add
-            (
-                new BaseDeAtributo("Resistência", 0f), new List<IAtributo> 
-                {
-                    new BaseDeAtributo("Defesa", 0f),
-                    new BaseDeAtributo("Vitalidade", 0f)
-                }
-            );
+            /* Fisico.Atributos.Add
+             (
+                 new BaseDeAtributo("Resistência", 0f), new List<IAtributo> 
+                 {
+                     new BaseDeAtributo("Defesa", 0f),
+                     new BaseDeAtributo("Vitalidade", 0f)
+                 }
+             );
 
-            Fisico.Atributos.Add
-            (
-                new BaseDeAtributo("Agilidade", 0f), new List<IAtributo>
-                {
-                    new BaseDeAtributo("Reflexos", 0f),
-                    new BaseDeAtributo("Destreza", 0f),
-                    new BaseDeAtributo("Velocidade", 0f)
-                }
-            );
+             Fisico.Atributos.Add
+             (
+                 new BaseDeAtributo("Agilidade", 0f), new List<IAtributo>
+                 {
+                     new BaseDeAtributo("Reflexos", 0f),
+                     new BaseDeAtributo("Destreza", 0f),
+                     new BaseDeAtributo("Velocidade", 0f)
+                 }
+             );*/
         }
     }
 }
