@@ -21,12 +21,12 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
             EssenciaDaAgua.PoderExigido = 3780f;
             EssenciaDaAgua.PoderConcedido = 6600f;
 
-            EssenciaDaAgua.PopularLista(EssenciaDaAgua.Propriedades, new string[] { "Limpante", "Molhante", "Curativa", "Maleavel" });
+            EssenciaDaAgua.PopularLista(EssenciaDaAgua.Propriedades, new List<string> { "Limpante", "Molhante", "Curativa", "Maleavel" });
 
             EssenciaDaAgua.PopularLista
             (
                 EssenciaDaAgua.EssenciasIncompativeis,
-                new IEssencia[] { Treva.EssenciaDaTreva, Fogo.EssenciaDoFogo, Raio.EssenciaDoRaio }
+                new List<IEssencia> { Treva.EssenciaDaTreva, Fogo.EssenciaDoFogo, Raio.EssenciaDoRaio }
             );
         }
     }

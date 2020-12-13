@@ -33,6 +33,6 @@ namespace ConquistadorAbsolutoBiblioteca.Linhagem
         IEntidade Portador { get; set; }
 
         void MostrarAtributos();
-        void PopularLista<T>(List<T> lista, T[] valores);
+        void PopularLista<T>(List<T> lista, List<T> valores);
     }
 }

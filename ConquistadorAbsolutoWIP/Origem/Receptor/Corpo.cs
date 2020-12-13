@@ -10,7 +10,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
     public sealed class Corpo
     {
         private static readonly Corpo _corpo = new Corpo();
-        public static IReceptor Fisico { get; set; }
+        public static IReceptor Fisico { get; private set; }
 
         static Corpo() { }
 

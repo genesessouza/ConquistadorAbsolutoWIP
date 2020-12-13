@@ -39,6 +39,6 @@ namespace ConquistadorAbsolutoBiblioteca.Raca
 
 
         void MostrarAtributos();
-        void PopularLista<T>(List<T> lista, T[] valores);
+        void PopularLista<T>(List<T> lista, List<T> valores);
     }
 }

@@ -30,6 +30,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
         /// </summary>
         void MostrarSubAtributos();
 
-        void PopularLista<T>(List<T> lista, T[] valores);
+        void PopularLista<T>(List<T> lista, List<T> valores);
     }
 }

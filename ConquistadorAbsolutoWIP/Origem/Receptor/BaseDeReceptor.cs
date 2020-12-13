@@ -31,10 +31,10 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 
         public void MostrarAtributos()
         {
-            Console.Write("Atributos Principais:");
-            foreach (var atributoPrincipal in Atributos)
+            Console.Write("Atributos Principais:\n");
+            foreach (var atributoPrincipal in Atributos.Keys)
             {
-                Console.Write($"{atributoPrincipal.Key.NomeDoAtributo}: <{atributoPrincipal.Key.ValorDoAtributo}>");
+                Console.Write($"{atributoPrincipal.NomeDoAtributo}: <{atributoPrincipal.ValorDoAtributo}>");
             }
             foreach (var atributoSecundario in Atributos.Values)
             {
@@ -47,7 +47,7 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
 
         }
 
-        public void PopularLista<T>(List<T> lista, T[] valores)
+        public void PopularLista<T>(List<T> lista, List<T> valores)
         {
             GenesesSouza.CSharpUtils.CollectionsUtils.PopulateCollection(lista, valores);
         }

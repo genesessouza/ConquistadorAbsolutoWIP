@@ -21,7 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
 
             RacaAllumi.PopularLista
             (
-                RacaAllumi.Caracteristicas, new string[] { "Peludo", "Juba", "Força Monstruosa", "Instintos e reflexos anormais" }
+                RacaAllumi.Caracteristicas, new List<string> { "Peludo", "Juba", "Força Monstruosa", "Instintos e reflexos anormais" }
             );
         }
     }

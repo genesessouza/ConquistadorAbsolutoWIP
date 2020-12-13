@@ -23,16 +23,16 @@ namespace ConquistadorAbsolutoBiblioteca.Essencia.Essencias
 
             EssenciaDoRaio.PopularLista
             (
-                EssenciaDoRaio.Propriedades, new string[] { "Eletrizante", "Paralisante", "Aceleradora", "Propagadora", "Cegante" }
+                EssenciaDoRaio.Propriedades, new List<string> { "Eletrizante", "Paralisante", "Aceleradora", "Propagadora", "Cegante" }
             );
 
             EssenciaDoRaio.PopularLista
             (
-                EssenciaDoRaio.EssenciasExigidas, new IEssencia[] { Fogo.EssenciaDoFogo }
+                EssenciaDoRaio.EssenciasExigidas, new List<IEssencia> { Fogo.EssenciaDoFogo }
             );
             EssenciaDoRaio.PopularLista
             (
-                EssenciaDoRaio.EssenciasIncompativeis, new IEssencia[] { Treva.EssenciaDaTreva, Agua.EssenciaDaAgua }
+                EssenciaDoRaio.EssenciasIncompativeis, new List<IEssencia> { Treva.EssenciaDaTreva, Agua.EssenciaDaAgua }
             );
         }
     }

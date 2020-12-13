@@ -83,7 +83,7 @@ namespace ConquistadorAbsolutoBiblioteca.Raca
 
         }
 
-        public void PopularLista<T>(List<T> receptor, T[] valores)
+        public void PopularLista<T>(List<T> receptor, List<T> valores)
         {
             GenesesSouza.CSharpUtils.CollectionsUtils.PopulateCollection(receptor, valores);
         }

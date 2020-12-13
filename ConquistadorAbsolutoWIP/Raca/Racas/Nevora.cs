@@ -28,13 +28,13 @@ namespace ConquistadorAbsolutoBiblioteca.Raca.Racas
             RacaNevora.PopularLista
             (
                 RacaNevora.Caracteristicas,
-                new string[] { "Alado", "Pele acinzentada", "Olhos negros", "Lábios e unhas arroxeados", "auréola negra sobre a cabeça" }
+                new List<string> { "Alado", "Pele acinzentada", "Olhos negros", "Lábios e unhas arroxeados", "auréola negra sobre a cabeça" }
             );
 
-            RacaNevora.PopularLista(RacaNevora.EssenciasDeRaca, new IEssencia[] { Treva.EssenciaDaTreva });
-            RacaNevora.PopularLista(RacaNevora.EssenciasIncompativeis, new IEssencia[] { Luz.EssenciaDaLuz });
-            RacaNevora.PopularLista(RacaNevora.LinhagensDeRaca, new ILinhagem[] { Diabo.LinhagemDoDiabo });
-            RacaNevora.PopularLista(RacaNevora.LinhagensIncompativeis, new ILinhagem[] { Arcanjo.LinhagemDoArcanjo });
+            RacaNevora.PopularLista(RacaNevora.EssenciasDeRaca, new List<IEssencia> { Treva.EssenciaDaTreva });
+            RacaNevora.PopularLista(RacaNevora.EssenciasIncompativeis, new List<IEssencia> { Luz.EssenciaDaLuz });
+            RacaNevora.PopularLista(RacaNevora.LinhagensDeRaca, new List<ILinhagem> { Diabo.LinhagemDoDiabo });
+            RacaNevora.PopularLista(RacaNevora.LinhagensIncompativeis, new List<ILinhagem> { Arcanjo.LinhagemDoArcanjo });
         }
     }
 }
