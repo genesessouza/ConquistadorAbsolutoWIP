@@ -21,7 +21,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         public BaseDeNucleo()
         {
             // Adiciona os receptores
-            Receptores = new List<IReceptor> { Corpo.Fisico };
+            Receptores = new List<IReceptor>();
         }
 
         /// <summary>
@@ -33,6 +33,7 @@ namespace ConquistadorAbsolutoBiblioteca.Entidade.Origem
         /// <param name="receptores">Receptor do poder (corpo, mente, espírito).</param>
         public void EnviarOrigem(float poderDeOrigemRecebido, List<IReceptor> receptores)
         {
+            Receptores.Add(Corpo.Fisico);
             // Poder total distribuido para todos os receptores
             var poderDeOrigemDividido = poderDeOrigemRecebido / receptores.Count;
 

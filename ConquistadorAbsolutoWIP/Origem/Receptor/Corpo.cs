@@ -28,8 +28,6 @@ namespace ConquistadorAbsolutoBiblioteca.Origem.Receptor
                     new BaseDeAtributo("Agilidade", 90f)
                 }
             );
-            for (int atributo = 0; atributo < Fisico.Atributos.Count; atributo++)
-                Fisico.SubAtributos.Add(Fisico.Atributos[atributo], new List<IAtributo> { new BaseDeAtributo("Sub-Atributo", 0f) });
 
             /* Fisico.Atributos.Add
              (
